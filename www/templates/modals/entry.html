@@ -1,0 +1,26 @@
+<div class="modal">
+    <ion-header-bar>
+        <h1 class="title">Add Entry</h1>
+    </ion-header-bar>
+
+    <ion-content has-bouncing="false">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Title" ng-model="entry.title">
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="Content" rows="15" ng-model="entry.content"></textarea>
+            </label>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="button button-full button-dark" ng-click="cancelEntryModal()">Cancel</button>
+            </div>
+            <div class="col">
+                <button class="button button-full button-royal" ng-click="closeEntryModal(entry)">Done</button>
+            </div>
+        </div>
+        
+    </ion-content>
+</div>
