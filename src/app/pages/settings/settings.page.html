@@ -1,9 +1,57 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>settings</ion-title>
+    <ion-buttons slot="start">
+      <ion-button expand="block">
+        <img src="assets/images/logo.png" />
+      </ion-button>
+    </ion-buttons>
+    <h1>Care-ing</h1>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+
+  <ion-card class="card">
+
+    <ion-item>
+      <ion-label [routerLink]="['profile']">Update Profile</ion-label>
+      <ion-icon name="person" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label [routerLink]="['notifications']">Notifications</ion-label>
+      <ion-icon name="notifications" slot="start"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="card">
+
+    <ion-item>
+      <ion-label [routerLink]="['about']">About</ion-label>
+      <ion-icon name="information-circle" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label [routerLink]="['terms']">Terms of Services</ion-label>
+      <ion-icon name="document-text" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label [routerLink]="['privacy']">Privacy Policy</ion-label>
+      <ion-icon name="lock-closed" slot="start"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="card">
+
+    <ion-item>
+      <ion-label [routerLink]="['contact']">Contact Us</ion-label>
+      <ion-icon name="mail" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item class="no-border">
+      <ion-label>Write a Review</ion-label>
+      <ion-icon name="chatbox" slot="start"></ion-icon>
+    </ion-item>
+  </ion-card>
 
 </ion-content>

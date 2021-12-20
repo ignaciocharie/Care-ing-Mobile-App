@@ -1,9 +1,130 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>activities</ion-title>
+    <ion-buttons slot="start">
+      <ion-button expand="block">
+        <img src="assets/images/logo.png" />
+      </ion-button>
+    </ion-buttons>
+    <h1>Care-ing</h1>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-searchbar class="ion-padding"></ion-searchbar>
 
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="walk"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="walk()">Take a walk</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="barbell"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="exercise()">Exercise</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="water"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="water()">Drink water</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="book"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="book()">Read a book</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="color-palette"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="paint()">Paint</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="headset"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="music()">Music break</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="bed"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="sleep()">Take a nap</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="rainy"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="bath()">Take a bath</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="musical-note"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="instrument()">Play music</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="call"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="talk()">Connect</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="partly-sunny"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="sunset()">Watch sunset</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="body"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="meditate()">Meditate</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="help-buoy"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="pray()">Pray</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="fast-food"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="food()">Eat your fav</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="cafe"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="coffee()">Coffee break</ion-button>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card>
+          <ion-icon color="light" name="paw"></ion-icon>
+          <ion-button color='light' fill='clear' (click)="pet()">Paw time</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

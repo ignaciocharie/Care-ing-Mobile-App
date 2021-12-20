@@ -1,1 +1,23 @@
+ion-title{
+    text-align: center;
+}
 
+[linespace]{
+    height: 30px;
+}
+
+ion-label{
+    color: #000;
+    opacity: .8;
+    font-size: 13px;
+    display: block;
+}
+ion-label a{
+    text-decoration: none;
+    color: var(--ion-color-light);
+}
+
+ion-button {
+    padding-left: 10%;
+    padding-right: 10%;
+}
