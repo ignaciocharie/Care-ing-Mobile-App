@@ -3,6 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'add-new-task',
+    loadChildren: () => import('src/app/pages/add-new-task/add-new-task.module').then( m => m.AddNewTaskPageModule)
+  },
+  {
+    path: 'update-task',
+    loadChildren: () => import('src/app/pages/update-task/update-task.module').then( m => m.UpdateTaskPageModule)
+  },
+  {
     path: '',
     loadChildren: () => import('./index/index.module').then(m => m.IndexPageModule)
   },
