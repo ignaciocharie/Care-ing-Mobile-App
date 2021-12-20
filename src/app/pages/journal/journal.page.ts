@@ -1,54 +1,28 @@
-import { Component } from '@angular/core';
-import { AlertController, ModalController } from '@ionic/angular';
-import { AddNewTaskPage } from '../add-new-task/add-new-task.page';
-import { TodoService } from '../todo.service';
-import { UpdateTaskPage } from '../update-task/update-task.page';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-journal',
-  templateUrl: 'journal.page.html',
-  styleUrls: ['journal.page.scss'],
+  templateUrl: './journal.page.html',
+  styleUrls: ['./journal.page.scss'],
 })
-export class JournalPage {
-  todoList = []
-  
-  today: number = Date.now();
-  
+export class JournalPage implements OnInit {
+  goalForm = this.fb.group({
+    goal: [''],
+  })
 
-  constructor(public modalCtlr: ModalController, public todoService:TodoService) { 
-    this.getAllTask()
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit() {
   }
 
-  async addNewItem() {
-    const modal = await this.modalCtlr.create({
-      component: AddNewTaskPage,
-    })
-    modal.onDidDismiss().then(newTask =>{
-      this.getAllTask()
-    })
-    return await modal.present()
+  onSave() {
+    console.log(this.goalForm.value)
+
   }
 
-  getAllTask(){
-    this.todoList = this.todoService.getAllTasks()
-    console.log(this.todoService.getAllTasks());
-  }
-
-  delete(key) { 
-    this.todoService.deleteTask(key)
-    this.getAllTask()
-  }
-
-  async update(selectedTask){
-    const modal = await this.modalCtlr.create({
-      component: UpdateTaskPage,
-      componentProps: {task: selectedTask}
-    })
-
-    modal.onDidDismiss().then(()=>{
-      this.getAllTask()
-    })
-    
-    return await modal.present()
-  }
 }
